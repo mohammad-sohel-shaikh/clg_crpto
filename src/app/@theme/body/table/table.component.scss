@@ -1,0 +1,48 @@
+.table-header{
+  font-size: small;
+  color: gray;
+  // font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.border{
+  border-radius: 20px;
+}
+.text-center{
+  color: #002358;
+}
+td{
+  color: #002358;
+}
+apx-chart{
+  height: 20%;
+  width: 10px;
+}
+.chartControl{
+  height: 10px;
+}
+.apexcharts-menu-icon{
+  display: none;
+}
+input[type="text"]{
+  width: 500px;
+
+  height: 30px;
+  padding-left: 20px;
+  max-width: 500px;
+  margin-right: 20px;
+  color: #002358;
+  // border:1px solid red;
+  border-radius: 50px;
+  border-top-right-radius: 50px;
+    // height: px;
+}
+::placeholder{
+  color:#002358
+}
+.search{
+  margin-right: 500px;
+  // margin-left: 500px;
+  padding-right: 250px;
+
+}

@@ -1,0 +1,58 @@
+
+<!-- <p>{{userdata|json}}</p> -->
+<div class="container">
+  <img
+    src={{userdata[0].iconUrl}}
+    width="40"
+    height="40"
+    alt="Coinranking cryptocurrency prices"
+    class="logo__img"
+  />
+  <span class="coinName"> {{userdata[0].name}}</span>
+  <h2 class="mainPrice">${{userdata[0].price|number:'1.1-3'}}</h2>
+
+  <!-- tage -->
+  <p>Tages</p>
+
+  <nb-tag-list class="tages">
+    <nb-tag status="basic" appearance="outline" text="Mineable"></nb-tag>
+    <nb-tag status="basic" appearance="outline" text="PoW"></nb-tag>
+    <nb-tag status="basic" appearance="outline" text="Smart contracts"></nb-tag>
+    <nb-tag status="basic" appearance="outline" text="Etherium"></nb-tag>
+  </nb-tag-list>
+
+
+  <div class="middlepart">
+
+    <nb-card class="card">
+      <nb-card-body>
+        <p class="cardheader">Market cap</p>
+        <h4 class="mt-5 ml-5"><span class="gray">$</span>{{userdata[0].marketCap}}</h4>
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card class="card">
+      <nb-card-body>
+        <p class="cardheader">Fully Diluted</p>
+        <h4 class="mt-5 ml-5"><span class="gray">$</span>27580894</h4>
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card class="card">
+      <nb-card-body>
+        <p class="cardheader">Volume</p>
+        <h4 class="mt-5 ml-5"><span class="gray">$ </span>{{userdata.total24hVolum}}</h4>
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card class="card">
+      <nb-card-body>
+        <p class="cardheader">Circulating  supply</p>
+        <h4 class="mt-5 ml-5"><span class="gray">$ </span>27580894</h4>
+      </nb-card-body>
+    </nb-card>
+
+  </div>
+</div>
+<!--  chart -->
+<app-datachart></app-datachart>
