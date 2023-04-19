@@ -1,7 +1,8 @@
 import { FetchdataService } from './../../service/fetchdata.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ContentComponent } from '../../content/content.component';
-import { NbTreeGridHeaderCellDirective } from '@nebular/theme';
+// import { ContentComponent } from '../../content/content.component';
+// import { NbTreeGridHeaderCellDirective } from '@nebular/theme';
+
 
 @Component({
   selector: 'app-table',
@@ -10,6 +11,7 @@ import { NbTreeGridHeaderCellDirective } from '@nebular/theme';
 })
 export class TableComponent implements OnInit {
   coinData: any;
+  time:any;
   iteams: any;
   constructor(private service: FetchdataService) {
     // data from api
@@ -44,12 +46,11 @@ export class TableComponent implements OnInit {
       }
     }
   }
-// let betterTime=(func:string, delay:number)=>{
-//   let timer;
+// betterTime(func:string, delay:number){
 //   return function(){
 //     let context = this, arg =arguments;
-//     clearTimeout(timer);
-//     timer = setTimeout(()=>{
+//     clearTimeout(this.timer);
+//     this.timer = setTimeout(()=>{
 //       func.apply(context, arg);
 //     },delay);
 //   }

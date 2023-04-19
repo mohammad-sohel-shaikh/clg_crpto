@@ -39,7 +39,6 @@ export class DatachartComponent implements OnInit {
 
   ngOnInit(): void {
     this.sparklinedata=this.contentdata.userdata[0].sparkline;
-    console.log(this.sparklinedata);
     this.chartOptions = {
       series: [
         {

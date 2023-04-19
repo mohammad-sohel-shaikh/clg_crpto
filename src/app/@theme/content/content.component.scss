@@ -29,9 +29,36 @@
   margin-left: 15px;
 }
 .mainPrice{
-    margin-left: 80px;
+    margin-left: 50px;
 }
 .tages{
     // padding: 10px 10px;
     padding:0px 0px ;
+    margin-left: 5px;
+}
+.summary{
+  margin-top: 20px;
+  margin-left: 5px;
+}
+.bold{
+  color: #002358;
+  font-weight: 700;
+}
+.more{
+  
+  font-weight: 700;
+}
+.symbol{
+  margin-left: 8px;
+  font-size: small;
+  font-weight: 200;
+}
+.rank{
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-left: 8px;
+  padding: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  color: gray;
 }
