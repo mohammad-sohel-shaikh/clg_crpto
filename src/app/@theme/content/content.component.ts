@@ -14,7 +14,11 @@ export class ContentComponent implements OnInit {
   userdata: any;
   ohlcdata:any;
   coindata:any;
+  exhchangesdata:any;
   index:any;
+  coinvolume:any;
+  volumeArray:any;
+
 
   constructor(
     private service: FetchdataService,
@@ -31,14 +35,14 @@ export class ContentComponent implements OnInit {
         this.userdata = this.uuiddata.data.coins.filter((value) => {
           return value.uuid == this.uuid;
         });
-        console.log(this.userdata,"userdata");
+        // console.log(this.userdata,"userdata");
         this.index=this.userdata.index
         
       });
 
-      this.service.ohlc(this.uuid).subscribe((param) => {
-        this.uuiddata = param;
-        console.log(param);
+      // this.service.ohlc(this.uuid).subscribe((param) => {
+      //   this.uuiddata = param;
+      //   console.log(param);
         
         
         // console.log(this.uuiddata,"ohlcdata");
@@ -47,16 +51,30 @@ export class ContentComponent implements OnInit {
         // });
         // console.log(this.uuiddata,"ohlcdata");  
         
-      });
+      // });
       
 
       this.service.coin(this.uuid).subscribe((param) => {
         this.uuiddata = param
         this.coindata=this.uuiddata.data.coin;
-        console.log(this.coindata,"coindata");
-        
-        
+        this.coinvolume=this.coindata["24hVolume"];
+        // console.log(this.volume);
+        // console.log(this.coindata,"coindata");    
       });
+
+      // this.service.exchanges(this.uuid).subscribe((param) => {
+      //   this.uuiddata = param
+      //   this.exhchangesdata=this.uuiddata.data.exchanges;
+      //   let hVolume=[];
+      //   for(let item of this.exhchangesdata){
+      //     hVolume.push(item["24hVolume"])
+      //   }
+      //   this.volumeArray=hVolume
+      //   console.log(this.volumeArray,"volume");
+        
+      //   // this.coindata=this.uuiddata.data.coin;
+      //   console.log(this.exhchangesdata,"exhchangesdata");    
+      // });
     }
   }
 }
