@@ -1,0 +1,74 @@
+<p>other-info works!</p>
+<!-- <div class="container"> -->
+    <div class="value-static">
+        <h4>Value statistics</h4>
+        <p>An overview showing the statistics of {{coindata.name}}, such as the base and quote currency, the rank, and
+            trading volume.</p>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td scope="row">
+                        <img src="https://cdn.coinranking.com/assets/3bc76b90ac5fa7a9d0ebb3eadd0db736.svg" alt="">
+                    </td>
+                    <td colspan="2">Price to USD</td>
+                    <td class="value">$ {{(coindata.price/1).toFixed(2)}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <img src="https://cdn.coinranking.com/assets/d5dc50712c0ee405fdacef50c1076d7f.svg" alt="">
+                    </th>
+                    <td colspan="2">Price to BTC</td>
+                    <td class="value">{{coindata.btcPrice|number:'1.2-3'}} BTC</td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <img src="https://cdn.coinranking.com/assets/71798b73ccd1acf2b7cecd584238b810.svg" alt="">
+                    </th>
+                    <td colspan="2">Rank</td>
+                    <td class="value">{{coindata.rank}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <img src="https://cdn.coinranking.com/assets/393c694ac4e62408003ed1617d009626.svg" alt="">
+                    </th>
+                    <td colspan="2">Market Cap</td>
+                    <td class="value">$ {{(coindata.marketCap/1000000000).toFixed(3)}} billion</td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <img src="https://cdn.coinranking.com/assets/393c694ac4e62408003ed1617d009626.svg" alt="">
+                    </th>
+                    <td colspan="2">Fully diluted market cap</td>
+                    <td class="value">$ {{(coindata.fullyDilutedMarketCap/1000000000).toFixed(3)}} billion</td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <img src="https://cdn.coinranking.com/assets/6dc3ae58ba61dc653ea96cfc969c581a.svg" alt="">
+                    </th>
+                    <td colspan="2">All-time high (daily avg.)</td>
+                    <td class="value">$ {{(coindata.allTimeHigh.price/1).toFixed(3)}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="links">
+        <h4>Links</h4>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let item of coindata.links">
+                    <td scope="row">
+                        <img src="https://cdn.coinranking.com/assets/a40864a55bcc2eb063a679c744419026.svg" alt="">
+                    </td>
+                    <td colspan="2">
+                        <a href={{item.url}} target="_blank">
+                            {{item.type|titlecase}}
+                        </a></td>
+                    <td class="value">{{item.name}}</td>
+                </tr>
+                <tr>
+
+            </tbody>
+        </table>
+    </div>
+<!-- </div> -->

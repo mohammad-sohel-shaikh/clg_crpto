@@ -21,8 +21,8 @@ export class FetchdataService {
     let headers = new HttpHeaders()
       .set(
         'X-RapidAPI-Key',
-        'f6b951e38cmsha6b1c7b5037e4c9p1dbdfejsnfe2472f2ea04'
-        // '86733f4be8msh687166c46bd6b7cp10ee1djsn35f9fee51666'
+        // 'f6b951e38cmsha6b1c7b5037e4c9p1dbdfejsnfe2472f2ea04'
+        '86733f4be8msh687166c46bd6b7cp10ee1djsn35f9fee51666'
       )
       .set('X-RapidAPI-Host', 'coinranking1.p.rapidapi.com');
 
@@ -36,8 +36,8 @@ export class FetchdataService {
     let headers = new HttpHeaders()
       .set(
         'X-RapidAPI-Key',
-        'f6b951e38cmsha6b1c7b5037e4c9p1dbdfejsnfe2472f2ea04'
-        // '86733f4be8msh687166c46bd6b7cp10ee1djsn35f9fee51666'
+        // 'f6b951e38cmsha6b1c7b5037e4c9p1dbdfejsnfe2472f2ea04'
+        '86733f4be8msh687166c46bd6b7cp10ee1djsn35f9fee51666'
       )
       .set('X-RapidAPI-Host', 'coinranking1.p.rapidapi.com');
 

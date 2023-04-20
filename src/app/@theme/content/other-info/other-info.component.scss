@@ -1,0 +1,29 @@
+table{
+    border-bottom: 1px solid rgb(142, 142, 224);
+}
+.value-static{
+    
+    width: 700px;
+    background-color: whitesmoke;
+    // border: 1px solid gray;
+    border-radius: 40px;
+    padding: 20px;
+}
+.value{
+    font-weight: 600;
+    color: #002358;
+    font-size: 15px;
+    text-align: right;
+}
+.links{
+    
+    width: 700px;
+    background-color: whitesmoke;
+    // border: 1px solid gray;
+    border-radius: 40px;
+    padding: 20px;
+}
+a{
+    text-decoration: none;
+    color: #002358;
+}
