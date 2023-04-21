@@ -10,10 +10,8 @@ import { ActivatedRoute } from '@angular/router';
 export class ExchangesComponent implements OnInit {
 
   uuid:any;
-  uuiddata:any;
-  exhchangesdata:any;
-  volumeArray:any;
-
+  exhchangedata:any;
+  
   constructor(
     private service: FetchdataService,
     private activateroute: ActivatedRoute
@@ -25,17 +23,11 @@ export class ExchangesComponent implements OnInit {
     if(this.uuid){
 
       this.service.exchanges(this.uuid).subscribe((param) => {
-        this.uuiddata = param
-        this.exhchangesdata=this.uuiddata.data.exchanges;
-        let hVolume=[];
-        for(let item of this.exhchangesdata){
-          hVolume.push(item["24hVolume"])
-        }
-        this.volumeArray=hVolume
-        console.log(this.volumeArray,"volume");
-        
+        this.exhchangedata = param
+        // this.exhchangesdata=this.exhchangedata.data.exchanges;
+
         // this.coindata=this.uuiddata.data.coin;
-        console.log(this.exhchangesdata,"exhchangesdata");    
+        console.log(this.exhchangedata,"exhchangesdata");    
       });
     }
   }

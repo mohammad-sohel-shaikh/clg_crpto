@@ -57,7 +57,6 @@ export class ContentComponent implements OnInit {
       this.service.coin(this.uuid).subscribe((param) => {
         this.uuiddata = param
         this.coindata=this.uuiddata.data.coin;
-        this.coinvolume=this.coindata["24hVolume"];
         // console.log(this.volume);
         // console.log(this.coindata,"coindata");    
       });

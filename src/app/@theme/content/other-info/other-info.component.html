@@ -72,7 +72,29 @@
         </table>
     </div>
 
-              <a class="nav-link" routerLink="datafetch" routerLinkActive="active-link">Exchange</a>
+    <!-- <div class="links">
+        <h4>Best exchanges to buy Bitcoin</h4>
+        <p>The top crypto exchanges that have {{}} available for trading, ranked by 24h trading volume and the current price.</p>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let item of coindata.links">
+                    <td scope="row">
+                        <img src="https://cdn.coinranking.com/assets/a40864a55bcc2eb063a679c744419026.svg" alt="">
+                    </td>
+                    <td colspan="2">
+                        <a href={{item.url}} target="_blank">
+                            {{item.type|titlecase}}
+                        </a></td>
+                    <td class="value">{{item.name}}</td>
+                </tr>
+                <tr>
+
+            </tbody>
+        </table>
+    </div> -->
+
+    
+    <button class="nav-link" (click)="gotoExchanges()" routerLinkActive="active-link">Exchange</button>
 
     <!-- <a routerLink="exchanges" >hi sohel</a> -->
     <!-- <button nbButton outline status="primary" [routerLink]="['/',exchanges']"  >All {{coindata.name}} exchange</button> -->

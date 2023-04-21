@@ -9,7 +9,7 @@ const routes: Routes = [
   {path:'',component:BodyComponent},
   {path:':uuid',component:ContentComponent},
   {path:'datafetch',component:DataFetchComponent},
-  {path:'exchanges',component:ExchangesComponent},
+  {path:':uuid/exchanges',component:ExchangesComponent},
   // {path:'',component:HeaderComponent}
 ];
 
