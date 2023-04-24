@@ -1,9 +1,9 @@
 table{
-    border-bottom: 1px solid rgb(142, 142, 224);
+    border-bottom: 1px solid rgb(129, 129, 218);
 }
 .value-static{
     
-    width: 700px;
+    width: 650px;
     background-color: whitesmoke;
     // border: 1px solid gray;
     border-radius: 40px;
@@ -17,7 +17,7 @@ table{
 }
 .links{
     
-    width: 700px;
+    width: 650px;
     background-color: whitesmoke;
     // border: 1px solid gray;
     border-radius: 40px;
@@ -26,4 +26,19 @@ table{
 a{
     text-decoration: none;
     color: #002358;
+}
+.grid-data{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.btnshowall{
+    outline: none;
+    border: 1px solid rgb(129, 129, 218);
+    background-color: white;
+    color: #264d89;
+    width: 650px;
+    height: 35px;
+    font-size: 15px;
 }

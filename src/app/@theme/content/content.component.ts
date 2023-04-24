@@ -18,6 +18,7 @@ export class ContentComponent implements OnInit {
   index:any;
   coinvolume:any;
   volumeArray:any;
+  recordata:any
 
 
   constructor(
@@ -35,45 +36,32 @@ export class ContentComponent implements OnInit {
         this.userdata = this.uuiddata.data.coins.filter((value) => {
           return value.uuid == this.uuid;
         });
-        // console.log(this.userdata,"userdata");
         this.index=this.userdata.index
         
       });
 
-      // this.service.ohlc(this.uuid).subscribe((param) => {
-      //   this.uuiddata = param;
-      //   console.log(param);
-        
-        
-        // console.log(this.uuiddata,"ohlcdata");
-        // this.ohlcdata = this.uuiddata.data.coins.filter((value) => {
-        //   return value.uuid == this.uuid;
-        // });
-        // console.log(this.uuiddata,"ohlcdata");  
-        
-      // });
-      
-
       this.service.coin(this.uuid).subscribe((param) => {
         this.uuiddata = param
         this.coindata=this.uuiddata.data.coin;
-        // console.log(this.volume);
-        // console.log(this.coindata,"coindata");    
+        console.log(this.coindata,"coindata");    
       });
 
-      // this.service.exchanges(this.uuid).subscribe((param) => {
-      //   this.uuiddata = param
-      //   this.exhchangesdata=this.uuiddata.data.exchanges;
-      //   let hVolume=[];
-      //   for(let item of this.exhchangesdata){
-      //     hVolume.push(item["24hVolume"])
-      //   }
-      //   this.volumeArray=hVolume
-      //   console.log(this.volumeArray,"volume");
+      this.service.exchanges(this.uuid).subscribe((param) => {
+        this.uuiddata = param
+        this.exhchangesdata=this.uuiddata.data.exchanges;
+        let record5data=[];
         
-      //   // this.coindata=this.uuiddata.data.coin;
-      //   console.log(this.exhchangesdata,"exhchangesdata");    
-      // });
+        for(let i=0;i<this.exhchangesdata.length;i++){
+          
+          if(i==5){
+            break;
+          }
+          else{
+            record5data.push(this.exhchangesdata[i])
+          }
+        }
+        this.recordata=record5data  
+      });
     }
   }
 }

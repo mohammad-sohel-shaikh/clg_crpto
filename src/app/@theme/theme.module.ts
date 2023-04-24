@@ -35,6 +35,7 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { DatachartComponent } from './content/datachart/datachart.component';
 import { OtherInfoComponent } from './content/other-info/other-info.component';
 import { ExchangesComponent } from './exchanges/exchanges.component';
+import { ExchangemarketComponent } from './content/exchangemarket/exchangemarket.component';
 
 
 
@@ -73,6 +74,7 @@ const THEME_MODULE = [
     DatachartComponent,
     OtherInfoComponent,
     ExchangesComponent,
+    ExchangemarketComponent,
   ],
   imports: [CommonModule, THEME_MODULE],
   exports: [THEME_MODULE],

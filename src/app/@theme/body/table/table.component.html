@@ -19,7 +19,7 @@
     </thead>
     <tbody id="myTable">
       <tr *ngFor="let user of coinData.data.coins;index as i">
-        <td>{{i+1}}</td>
+        <td>{{user.rank}}</td>
         <td [routerLink]="['/',user.uuid]">
           <img
             src={{user.iconUrl}}

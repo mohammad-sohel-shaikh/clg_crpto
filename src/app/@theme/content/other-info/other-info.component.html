@@ -1,5 +1,7 @@
 <p>other-info works!</p>
 <!-- <div class="container"> -->
+<div class="grid-data">
+
     <div class="value-static">
         <h4>Value statistics</h4>
         <p>An overview showing the statistics of {{coindata.name}}, such as the base and quote currency, the rank, and
@@ -26,6 +28,13 @@
                     </th>
                     <td colspan="2">Rank</td>
                     <td class="value">{{coindata.rank}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <img src="	https://cdn.coinranking.com/assets/b78e552433d71e96938327c805491a88.svg" alt="">
+                    </th>
+                    <td colspan="2">24h volume</td>
+                    <td class="value">{{coindata["24hVolume"]}}</td>
                 </tr>
                 <tr>
                     <th scope="row">
@@ -63,40 +72,45 @@
                     <td colspan="2">
                         <a href={{item.url}} target="_blank">
                             {{item.type|titlecase}}
-                        </a></td>
+                        </a>
+                    </td>
                     <td class="value">{{item.name}}</td>
                 </tr>
-                <tr>
 
             </tbody>
         </table>
     </div>
-
-    <!-- <div class="links">
-        <h4>Best exchanges to buy Bitcoin</h4>
-        <p>The top crypto exchanges that have {{}} available for trading, ranked by 24h trading volume and the current price.</p>
-        <table class="table">
-            <tbody>
-                <tr *ngFor="let item of coindata.links">
-                    <td scope="row">
-                        <img src="https://cdn.coinranking.com/assets/a40864a55bcc2eb063a679c744419026.svg" alt="">
-                    </td>
-                    <td colspan="2">
-                        <a href={{item.url}} target="_blank">
-                            {{item.type|titlecase}}
-                        </a></td>
-                    <td class="value">{{item.name}}</td>
-                </tr>
-                <tr>
-
-            </tbody>
-        </table>
-    </div> -->
+     
+    <app-exchangemarket></app-exchangemarket>>
 
     
-    <button class="nav-link" (click)="gotoExchanges()" routerLinkActive="active-link">Exchange</button>
+    <!-- <div class="links">
+                <h4>Best exchanges to buy Bitcoin</h4>
+                <p>The top crypto exchanges that have {{}} available for trading, ranked by 24h trading volume and the current price.</p>
+                <table class="table">
+                    <tbody>
+                        <tr *ngFor="let item of coindata.links">
+                            <td scope="row">
+                                <img src="https://cdn.coinranking.com/assets/a40864a55bcc2eb063a679c744419026.svg" alt="">
+                            </td>
+                            <td colspan="2">
+                                <a href={{item.url}} target="_blank">
+                                    {{item.type|titlecase}}
+                        </a></td>
+                        <td class="value">{{item.name}}</td>
+                    </tr>
+                <tr>
 
-    <!-- <a routerLink="exchanges" >hi sohel</a> -->
-    <!-- <button nbButton outline status="primary" [routerLink]="['/',exchanges']"  >All {{coindata.name}} exchange</button> -->
+                </tbody>
+            </table>
+        </div> -->
+
+
+</div>
+<button class="nav-link" (click)="gotoExchanges()" class="btnshowall" routerLinkActive="active-link">All
+    {{coindata.symbol}} Exchanges</button>
+
+<!-- <a routerLink="exchanges" >hi sohel</a> -->
+<!-- <button nbButton outline status="primary" [routerLink]="['/',exchanges']"  >All {{coindata.name}} exchange</button> -->
 
 <!-- </div> -->
