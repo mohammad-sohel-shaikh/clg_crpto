@@ -1,0 +1,33 @@
+<div class="marketrecord">
+    <h4>Markets</h4>
+    <p>A list of the top Ethereum markets across all crypto exchanges based on the highest 24h trading volume, with their current price.</p>
+    <table class="table">
+        <thead>
+            <tr class="table-header">
+                <th scope="col">markets</th>
+                <th scope="col" class="value">24h Volume</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of market5data">
+                <td scope="row">
+                    <span class="mr-5">{{item.rank}}</span>
+                    <img src={{item.exchange.iconUrl}} width="28" height="28" class="mr-2"
+                        alt="Coinranking cryptocurrency prices" class="logo__img" />
+                    <span class="mr-5">{{item.base.symbol}}/{{item.quote.symbol}}</span>
+                    <div style="font-size: small;margin-left: 50px;color:gray">{{item.exchange.name}}</div>
+
+                </td>
+
+                <td colspan="2" class="value">
+                    $ {{(item["24hVolume"]/1000000).toFixed(3)}} million
+                    <div style="font-size: small;margin-left: 33px;">$ {{(item.price/1).toFixed(3)}}</div>
+
+                </td>
+            </tr>
+            <tr>
+
+        </tbody>
+    </table>
+
+</div>

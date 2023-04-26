@@ -1,0 +1,31 @@
+<div class="exchangerecord">
+    <h4>Best exchanges to buy Bitcoin</h4>
+    <p>The top crypto exchanges that have Bitcoin available for trading, ranked by 24h trading volume and the current price.</p>
+    <table class="table">
+        <thead>
+            <tr class="table-header">
+                <th scope="col">Exchanges</th>
+                <th scope="col" class="value">24h Volume</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of exchange5data">
+                <td scope="row">
+                    <span class="mr-5">{{item.rank}}</span>
+                    <img src={{item.iconUrl}} width="28" height="28" class="mr-2"
+                        alt="Coinranking cryptocurrency prices" class="logo__img" />
+                    <span class="mr-5">{{item.name}}</span>
+                </td>
+
+                <td colspan="2" class="value">
+                    $ {{(item["24hVolume"]/1000000).toFixed(3)}} million
+                    <div style="font-size: small;margin-left: 33px;">$ {{(item.price/1).toFixed(3)}}</div>
+
+                </td>
+            </tr>
+            <tr>
+
+        </tbody>
+    </table>
+
+</div>

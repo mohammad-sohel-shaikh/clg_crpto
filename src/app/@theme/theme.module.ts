@@ -36,6 +36,11 @@ import { DatachartComponent } from './content/datachart/datachart.component';
 import { OtherInfoComponent } from './content/other-info/other-info.component';
 import { ExchangesComponent } from './exchanges/exchanges.component';
 import { ExchangemarketComponent } from './content/exchangemarket/exchangemarket.component';
+import { ExchangerecordComponent } from './content/exchangerecord/exchangerecord.component';
+import { MarketrecordComponent } from './content/marketrecord/marketrecord.component';
+import { MarketComponent } from './market/market.component';
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 
@@ -75,6 +80,11 @@ const THEME_MODULE = [
     OtherInfoComponent,
     ExchangesComponent,
     ExchangemarketComponent,
+    ExchangerecordComponent,
+    MarketrecordComponent,
+    MarketComponent,
+    SigninComponent,
+    SignupComponent,
   ],
   imports: [CommonModule, THEME_MODULE],
   exports: [THEME_MODULE],

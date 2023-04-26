@@ -1,30 +1,68 @@
-<p>exchangemarket works!</p>
-<div class="links">
-    <h4>Links</h4>
-    <table class="table">
-        <thead>
-            <tr class="table-header">
-                <th scope="col">Exchanges</th>
-                <th scope="col">24h Volume</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let item of exchange5data">
-                <td scope="row">
-                    <span class="mr-2">{{item.rank}}</span>
-                    <img src={{item.iconUrl}} width="28" height="28" alt="Coinranking cryptocurrency prices"
-                        class="logo__img" />
-                    <span>{{item.name}}</span>
-                </td>
+<div class="grid-data">
 
-                <td colspan="2" class="value">
-                    $ {{(item["24hVolume"]/1000000).toFixed(3)}} million
-                    <div style="font-size: small;margin-left: 33px;">$ {{(item.price/1).toFixed(3)}}</div>
 
-                </td>
-            </tr>
-            <tr>
+    <div class="links">
+        <h4>Exchanges</h4>
 
-        </tbody>
-    </table>
+        <table class="table">
+            <thead>
+                <tr class="table-header">
+                    <th scope="col">Exchanges</th>
+                    <th scope="col" class="value">24h Volume</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of exchange5data">
+                    <td scope="row">
+                        <span class="mr-5">{{item.rank}}</span>
+                        <img src={{item.iconUrl}} width="28" height="28" class="mr-2"
+                            alt="Coinranking cryptocurrency prices" class="logo__img" />
+                        <span class="mr-5">{{item.name}}</span>
+                    </td>
+
+                    <td colspan="2" class="value">
+                        $ {{(item["24hVolume"]/1000000).toFixed(3)}} million
+                        <div style="font-size: small;margin-left: 33px;">$ {{(item.price/1).toFixed(3)}}</div>
+
+                    </td>
+                </tr>
+                <tr>
+
+            </tbody>
+        </table>
+
+    </div>
+    <div class="links">
+        <h4>Exchanges</h4>
+        <!-- <p>An overview showing the statistics of {{coindata.name}}, such as the base and quote currency, the rank, and
+            trading volume.</p> -->
+        <table class="table">
+            <thead>
+                <tr class="table-header">
+                    <th scope="col">Exchanges</th>
+                    <th scope="col" class="value">24h Volume</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of exchange5data">
+                    <td scope="row">
+                        <span class="mr-5">{{item.rank}}</span>
+                        <img src={{item.iconUrl}} width="28" height="28" class="mr-2"
+                            alt="Coinranking cryptocurrency prices" class="logo__img" />
+                        <span class="mr-5">{{item.name}}</span>
+                    </td>
+
+                    <td colspan="2" class="value">
+                        $ {{(item["24hVolume"]/1000000).toFixed(3)}} million
+                        <div style="font-size: small;margin-left: 33px;">$ {{(item.price/1).toFixed(3)}}</div>
+
+                    </td>
+                </tr>
+                <tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
 </div>

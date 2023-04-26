@@ -1,5 +1,3 @@
-<p>other-info works!</p>
-<!-- <div class="container"> -->
 <div class="grid-data">
 
     <div class="value-static">
@@ -80,35 +78,17 @@
             </tbody>
         </table>
     </div>
-     
-    <app-exchangemarket></app-exchangemarket>>
+    <app-exchangerecord></app-exchangerecord>
+    <app-marketrecord></app-marketrecord>
+    <!-- <app-exchangemarket></app-exchangemarket> -->
 
-    
-    <!-- <div class="links">
-                <h4>Best exchanges to buy Bitcoin</h4>
-                <p>The top crypto exchanges that have {{}} available for trading, ranked by 24h trading volume and the current price.</p>
-                <table class="table">
-                    <tbody>
-                        <tr *ngFor="let item of coindata.links">
-                            <td scope="row">
-                                <img src="https://cdn.coinranking.com/assets/a40864a55bcc2eb063a679c744419026.svg" alt="">
-                            </td>
-                            <td colspan="2">
-                                <a href={{item.url}} target="_blank">
-                                    {{item.type|titlecase}}
-                        </a></td>
-                        <td class="value">{{item.name}}</td>
-                    </tr>
-                <tr>
-
-                </tbody>
-            </table>
-        </div> -->
 
 
 </div>
 <button class="nav-link" (click)="gotoExchanges()" class="btnshowall" routerLinkActive="active-link">All
     {{coindata.symbol}} Exchanges</button>
+<button class="nav-link" (click)="gotoMarkets()" class="btnshowall" routerLinkActive="active-link">All
+    {{coindata.symbol}} Markets</button>
 
 <!-- <a routerLink="exchanges" >hi sohel</a> -->
 <!-- <button nbButton outline status="primary" [routerLink]="['/',exchanges']"  >All {{coindata.name}} exchange</button> -->

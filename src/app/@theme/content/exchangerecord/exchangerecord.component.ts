@@ -4,11 +4,12 @@ import { FetchdataService } from '../../service/fetchdata.service';
 import { ContentComponent } from '../content.component';
 
 @Component({
-  selector: 'app-exchangemarket',
-  templateUrl: './exchangemarket.component.html',
-  styleUrls: ['./exchangemarket.component.scss']
+  selector: 'app-exchangerecord',
+  templateUrl: './exchangerecord.component.html',
+  styleUrls: ['./exchangerecord.component.scss']
 })
-export class ExchangemarketComponent implements OnInit {
+export class ExchangerecordComponent implements OnInit {
+
   exchange5data: any;
   uuid: any;
   uuiddata:any
@@ -20,8 +21,7 @@ export class ExchangemarketComponent implements OnInit {
   ngOnInit(): void {
     this.uuid = this.activateroute.snapshot.paramMap.get('uuid');
 
-    this.exchange5data = this.content.recordata;
-    console.log(this.exchange5data)
+
     this.service.exchanges(this.uuid).subscribe((param) => {
       this.uuiddata = param
       this.exhchangesdata = this.uuiddata.data.exchanges;

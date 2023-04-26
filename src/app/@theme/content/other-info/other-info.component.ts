@@ -10,7 +10,6 @@ import { ContentComponent } from '../content.component';
 export class OtherInfoComponent implements OnInit {
 
   coindata: any;
-  exchange5data:any;
   constructor(private content: ContentComponent, private route: ActivatedRoute, private router: Router) {
 
   }
@@ -19,11 +18,12 @@ export class OtherInfoComponent implements OnInit {
   gotoExchanges() {
     this.router.navigate(['exchanges'], { relativeTo: this.route })
   }
+  gotoMarkets() {
+    this.router.navigate(['market'], { relativeTo: this.route })
+  }
   ngOnInit(): void {
 
     this.coindata = this.content.coindata
-    this.exchange5data=this.content.recordata;
-  console.log(this.exchange5data)
     console.log(this.coindata, "inside other-infi");
 
   }
